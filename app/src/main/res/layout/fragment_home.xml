@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:iconifiedByDefault="false"
-        android:queryHint="Searchh"
+        android:queryHint="Search"
         android:background="@android:color/white"/>
 
     <ImageView
