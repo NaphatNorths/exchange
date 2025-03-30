@@ -1,39 +1,204 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#DCDCDC"
     tools:context=".ui.HomeFragment">
 
-
-    <SearchView
-        android:id="@+id/searchView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:iconifiedByDefault="false"
-        android:queryHint="SearchH"
-        android:background="@android:color/white"/>
+        android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/bannerImage2"
-        android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:layout_marginTop="2dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/banner"
-        tools:src="@drawable/banner"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/background_prongsai_3"
+            android:padding="8dp">
+
+            <!-- Exchange Button on the left -->
+            <TextView
+                android:id="@+id/nav_home"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="EXC"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <!-- Search View in the center -->
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@id/nav_home"
+                android:layout_toStartOf="@id/btnCart"
+                android:layout_marginHorizontal="8dp"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search"
+                android:background="@drawable/background_prongsai"/>
+
+            <!-- Cart Button on the right -->
+            <ImageView
+                android:id="@+id/btnCart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_heart"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
 
 
-    <TextView
-        android:id="@+id/ClickMe"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:text="กดที่นี้ เพื่อดูของที่จะแลก"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/bannerImage2"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_marginTop="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/banner"
+            tools:src="@drawable/banner" />
+
+        <!--แทบตัวเลือก-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/background_prongsai_3"
+            android:padding="8dp">
+
+            <!-- Fashion Layout -->
+            <LinearLayout
+                android:id="@+id/fashionLayout"
+                android:layout_width="57dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_prongsai_2"
+                android:layout_marginHorizontal="20dp">
+
+                <ImageView
+                    android:id="@+id/fashion"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/a" />
+
+                <TextView
+                    android:id="@+id/fashion_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="fashion"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Sport Layout -->
+            <LinearLayout
+                android:id="@+id/sportLayout"
+                android:layout_width="57dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_prongsai_2"
+                android:layout_toEndOf="@id/fashionLayout"
+                android:layout_marginHorizontal="20dp"> <!-- เพิ่มระยะห่างด้านขวา -->
+
+                <ImageView
+                    android:id="@+id/sport"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/a" />
+
+                <TextView
+                    android:id="@+id/sport_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="sport"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Camping Layout -->
+            <LinearLayout
+                android:id="@+id/campingLayout"
+                android:layout_width="57dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_prongsai_2"
+                android:layout_toEndOf="@id/sportLayout"
+                android:layout_marginHorizontal="20dp"> <!-- เพิ่มระยะห่างด้านขวา -->
+
+                <ImageView
+                    android:id="@+id/camping"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/a" />
+
+                <TextView
+                    android:id="@+id/camping_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="camping"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <!-- Electronics Layout -->
+            <LinearLayout
+                android:id="@+id/electronicsLayout"
+                android:layout_width="57dp"
+                android:layout_height="65dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/background_prongsai_2"
+                android:layout_toEndOf="@id/campingLayout"
+                android:layout_marginHorizontal="20dp"> <!-- เพิ่มระยะห่างด้านขวา -->
+
+                <ImageView
+                    android:id="@+id/electronics"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/a" />
+
+                <TextView
+                    android:id="@+id/electronics_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:text="electronics"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
 
 
-</LinearLayout>
+
+
+        <TextView
+            android:id="@+id/ClickMe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="กดที่นี้ เพื่อดูของที่จะแลก"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</ScrollView>
