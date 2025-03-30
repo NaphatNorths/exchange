@@ -40,7 +40,7 @@
                 android:layout_height="40dp"
                 android:layout_centerInParent="true"
                 android:layout_toEndOf="@id/nav_home"
-                android:layout_toStartOf="@id/btnCart"
+                android:layout_toStartOf="@id/btnheart"
                 android:layout_marginHorizontal="8dp"
                 android:iconifiedByDefault="false"
                 android:queryHint="Search"
@@ -48,7 +48,7 @@
 
             <!-- Cart Button on the right -->
             <ImageView
-                android:id="@+id/btnCart"
+                android:id="@+id/btnheart"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@drawable/ic_heart"

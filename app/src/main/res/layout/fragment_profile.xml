@@ -14,15 +14,16 @@
         <ImageView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:contentDescription="User Avatar"
-            android:src="@mipmap/ic_launcher_round" />
+            android:src="@mipmap/ic_launcher_lunga" />
+            <!--android:contentDescription="User Avatar"-->
+            <!--android:src="@mipmap/ic_launcher_round" />-->
 
         <TextView
             android:id="@+id/firstname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:text="ชื่อ: First"
+            android:text="ชื่อ: Apinan"
             android:textSize="18dp"
             android:textColor="@color/black"/>
 
@@ -30,14 +31,14 @@
             android:id="@+id/lastname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="นามสกุล: Last"
+            android:text="นามสกุล: naja"
             android:textSize="18dp"
             android:textColor="@color/black"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="email: user@email.com"
+            android:text="email: apinan@email.com"
             android:textSize="18dp"
             android:textColor="@color/black" />
 
