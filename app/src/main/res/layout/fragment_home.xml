@@ -8,14 +8,13 @@
     tools:context=".ui.HomeFragment">
 
 
-
-    <ImageView
-        android:id="@+id/bannerImage"
+    <SearchView
+        android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/banner"
-        tools:src="@drawable/banner" />
+        android:layout_height="wrap_content"
+        android:iconifiedByDefault="false"
+        android:queryHint="Search"
+        android:background="@android:color/white"/>
 
     <ImageView
         android:id="@+id/bannerImage2"
@@ -24,7 +23,8 @@
         android:layout_marginTop="2dp"
         android:scaleType="fitXY"
         android:src="@drawable/banner"
-        tools:src="@drawable/banner" />
+        tools:src="@drawable/banner"/>
+
 
     <TextView
         android:id="@+id/ClickMe"
@@ -34,5 +34,6 @@
         android:text="กดที่นี้ เพื่อดูของที่จะแลก"
         android:textSize="18dp"
         android:textStyle="bold" />
+
 
 </LinearLayout>
