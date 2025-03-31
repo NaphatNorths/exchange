@@ -334,7 +334,6 @@
                 app:labelVisibilityMode="labeled"
                 app:menu="@menu/bottom_nav_menu"/>
 
-
         </com.google.android.material.bottomappbar.BottomAppBar>
 
     </LinearLayout>
