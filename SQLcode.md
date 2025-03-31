@@ -92,6 +92,7 @@ JOIN users u ON f.userid = u.userid
 JOIN itemList i ON f.itemid = i.itemid;
 
 
+
 SELECT * FROM userItemListView WHERE userid = 'user-001';
 SELECT * FROM itemListView WHERE userid = 'user-001';
 SELECT * FROM itemFavoriteView WHERE userid = 'user-001';
