@@ -13,10 +13,10 @@
         android:icon="@drawable/ic_exchange"
         android:title="exchange"/>
 
-<!--    <item-->
-<!--        android:id="@+id/navigation_favorite"-->
-<!--        android:icon="@drawable/ic_favorite"-->
-<!--        android:title="favorite"/>-->
+    <item
+        android:id="@+id/navigation_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:title="favorite"/>
 
     <item
         android:id="@+id/navigation_activity"
