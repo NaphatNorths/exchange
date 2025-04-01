@@ -36,25 +36,24 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/background_prongsai_2"
-            android:layout_weight="1"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
-
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                app:srcCompat="@android:drawable/ic_menu_report_image"
-                tools:src="@tools:sample/avatars" />
+            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/product_name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ชื่อสินค้า 1 *"
+                android:text="เสื้อ liverpool"
                 android:textSize="14sp"
                 android:layout_marginTop="8dp"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/liverpool" />
 
             <Button
                 android:id="@+id/btn_add_favorites1"
@@ -78,14 +77,7 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/background_prongsai_2"
-            android:layout_weight="1"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
-
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                app:srcCompat="@android:drawable/ic_menu_report_image"
-                tools:src="@tools:sample/avatars" />
+            android:layout_weight="1">
 
             <TextView
                 android:id="@+id/product_name2"
@@ -98,11 +90,17 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"/>
 
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:src="@drawable/s2" />
+
             <Button
                 android:id="@+id/btn_add_favorites2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add to Favorites"
+                android:text="Basketball"
                 android:textSize="10dp"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@drawable/backbotton_1"

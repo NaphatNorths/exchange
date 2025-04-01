@@ -18,7 +18,7 @@
             android:title="Item" />
         <item
             android:id="@+id/nav_myexchange"
-            android:title="รายการของฉัน" />
+            android:title="My Exchange" />
         <item
             android:id="@+id/nav_profile"
             android:title="Profile" />
