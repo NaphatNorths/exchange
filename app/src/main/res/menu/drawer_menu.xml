@@ -28,7 +28,7 @@
             android:title="favorite" />
         <item
             android:id="@+id/nav_deals"
-            android:icon="@drawable/ic_home"
+            android:icon="@drawable/ic_request"
             android:title="ึrequest" />
         <item
             android:id="@+id/nav_logout"

@@ -54,15 +54,16 @@
                     android:layout_width="110dp"
                     android:layout_height="114dp"
                     android:layout_marginRight="6dp"
-                    tools:src="@drawable/liverpool"
-                    android:src="@drawable/liverpool"/>
+                    tools:src="@drawable/liverpool2"
+                    android:src="@drawable/liverpool2"/>
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="110dp"
-                    android:layout_height="114dp"
-                    android:src="@drawable/liverpool"
-                    tools:src="@drawable/liverpool" />
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="7dp"
+                    android:src="@drawable/liverpool3"
+                    tools:src="@drawable/liverpool3" />
             </LinearLayout>
 
 
