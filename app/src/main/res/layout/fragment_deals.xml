@@ -18,84 +18,94 @@
         android:focusable="true" />
 
 
-    <LinearLayout
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="left"
         android:layout_marginTop="16dp"
-        android:background="@drawable/product_border">
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:background="?android:attr/selectableItemBackground">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="left">
+            android:gravity="start"
+            android:padding="16dp"
+            android:background="@drawable/product_border">
 
+            <!-- Image Section -->
             <androidx.constraintlayout.utils.widget.ImageFilterView
                 android:id="@+id/imageFilterView"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:src="@android:drawable/ic_menu_report_image" />
+                android:src="@drawable/liverpool"
+                android:layout_gravity="center_vertical"/>
 
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="left">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
+            <!-- Text Section -->
+            <LinearLayout
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
-                android:text="ชื่อสินค้า..."
-                android:textAlignment="textStart"
-                android:textSize="25sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ชื่อผู้แลกเปลี่ยน: ....."
+                android:layout_weight="1"
+                android:orientation="vertical"
                 android:gravity="start"
-                android:textSize="16sp"
-                android:textStyle="bold"/>
-            <TextView
+                android:paddingStart="16dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เสื้อ liverpool"
+                    android:textSize="20sp"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ชื่อผู้แลกเปลี่ยน: A"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="แลกกับ: Apinan"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"/>
+            </LinearLayout>
+
+            <!-- Button Section -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="แลกกับ: (ของๆเรา)"
+                android:orientation="vertical"
                 android:gravity="start"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="16dp"/>
+                android:layout_gravity="center_vertical"
+                android:paddingEnd="16dp">
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:text="ตกลงแลก"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="108dp"
+                    android:layout_height="wrap_content"
+                    android:text="ไม่แลก"
+                    android:textSize="14sp"
+                    android:layout_marginTop="8dp"/>
+            </LinearLayout>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    </androidx.cardview.widget.CardView>
 
-            <Button
-                android:id="@+id/btn_confirm"
-                android:layout_width="108dp"
-                android:layout_height="wrap_content"
-                android:text="ตกลงแลก"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
-
-            <Button
-                android:id="@+id/btn_cancel"
-                android:layout_width="108dp"
-                android:layout_height="wrap_content"
-                android:text="ไม่แลก"
-                android:textSize="14dp"
-                android:layout_marginTop="8dp"/>
-
-        </LinearLayout>
-    </LinearLayout>
 
 </LinearLayout>
