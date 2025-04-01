@@ -33,6 +33,12 @@ class HomeFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-    }
+        binding.LinearLayoutClickMeNaja.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ItemProfileFragment())
+                .addToBackStack(null)
+                .commit()
+        }
 
+    }
 }

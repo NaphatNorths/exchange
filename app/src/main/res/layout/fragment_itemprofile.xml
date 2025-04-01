@@ -4,7 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#DCDCDC"
     tools:context=".ui.ItemProfileFragment">
+
 
 
     <LinearLayout
@@ -21,17 +23,30 @@
             android:gravity="center"
             android:orientation="vertical">
 
-            <ImageView
-                android:id="@+id/imageView1"
+            <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
-                android:layout_height="235dp"
-                app:srcCompat="@android:drawable/ic_menu_report_image"
-                tools:src="@tools:sample/avatars" />
+                android:layout_height="300dp"
+                android:layout_marginTop="2dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginHorizontal="5dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/bannerImage2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/banner"
+                    tools:src="@drawable/banner"/>
+            </androidx.cardview.widget.CardView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
+                android:layout_marginVertical="7dp"
+                android:background="@drawable/background_prongsai_3"
                 android:gravity="left">
 
 
@@ -56,6 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/background_prongsai_3"
                 android:gravity="left">
 
 
@@ -64,6 +81,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="5dp"
                     android:text="ชื่อสินค้า 1 .."
                     android:gravity="start"
                     android:textSize="20dp"
@@ -75,9 +93,11 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="รายละเอียด.."
+                    android:layout_marginHorizontal="5dp"
                     android:textAlignment="center"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="14dp" />
+
             </LinearLayout>
 
 
@@ -85,16 +105,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginVertical="6dp"
+                android:background="@drawable/background_prongsai_3"
                 android:gravity="left">
+
 
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="30dp"
+                    android:layout_marginTop="5dp"
                     android:text="เลือกของที่จะแลกเปลี่ยน"
                     android:gravity="start"
                     android:textSize="16dp"
+                    android:layout_marginHorizontal="5dp"
                     android:textStyle="bold"/>
 
                 <Spinner
@@ -118,8 +142,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
+        android:layout_marginHorizontal="7dp"
         android:text="แลกเปลี่ยน"
         android:textColor="@android:color/white"
+        android:backgroundTint="@drawable/backbotton_1"
         android:textSize="20dp" />
 
 </FrameLayout>
