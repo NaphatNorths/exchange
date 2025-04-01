@@ -3,6 +3,7 @@ package com.norths.project.exchange
 import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
@@ -170,27 +171,35 @@ class MainActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
 
-        binding.ClickMe.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ExchangeFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-
-        binding.LinearLayoutClickMeNaja.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ItemProfileFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
+//    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        super.onViewCreated(view, savedInstanceState)
+//
+//        binding.navigation_home.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, HomeFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
+//
+//        binding.navigation_exchange.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, MyExchangeFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
+//
+//        binding.navigation_favorite.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, MyExchangeFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
+//    }
+//
+//    override fun onDestroyView() {
+//        super.onDestroyView()
+//        _binding = null
+//    }
 }
 

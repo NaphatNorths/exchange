@@ -71,8 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
-                android:src="@drawable/banner"
-                tools:src="@drawable/banner"/>
+                android:src="@drawable/p1"
+                tools:src="@drawable/p1"/>
         </androidx.cardview.widget.CardView>
 
 
@@ -96,9 +96,9 @@
 
                 <ImageView
                     android:id="@+id/fashion"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/a" />
+                    android:layout_width="46dp"
+                    android:layout_height="47dp"
+                    android:src="@drawable/f1" />
 
                 <TextView
                     android:id="@+id/fashion_name"
@@ -124,9 +124,9 @@
 
                 <ImageView
                     android:id="@+id/sport"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/a" />
+                    android:layout_width="45dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/s1" />
 
                 <TextView
                     android:id="@+id/sport_name"
@@ -152,9 +152,9 @@
 
                 <ImageView
                     android:id="@+id/camping"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/a" />
+                    android:layout_width="47dp"
+                    android:layout_height="46dp"
+                    android:src="@drawable/c3" />
 
                 <TextView
                     android:id="@+id/camping_name"
@@ -180,16 +180,16 @@
 
                 <ImageView
                     android:id="@+id/electronics"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/a" />
+                    android:layout_width="69dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/e3" />
 
                 <TextView
                     android:id="@+id/electronics_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="1dp"
-                    android:text="electronics"
+                    android:text="electronic"
                     android:textAlignment="center"
                     android:textColor="@color/black"
                     android:textSize="10sp" />
@@ -235,6 +235,7 @@
             android:background="@drawable/background_prongsai_3"
             android:weightSum="2">
 
+            <!--เสื้อliverpool-->
             <LinearLayout
                 android:id="@+id/LinearLayoutClickMeNaja"
                 android:layout_width="0dp"
@@ -245,20 +246,23 @@
                 android:clickable="true"
                 android:focusable="true"
                 android:background="@drawable/background_prongsai_2"
-                android:layout_weight="1"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
+                android:layout_weight="1">
 
                 <ImageView
                     android:id="@+id/imageView1"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="110dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/liverpool"
+                    android:src="@drawable/liverpool" />
+
 
                 <TextView
-                    android:id="@+id/product_name1"
+                    android:id="@+id/product_liverpool"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ชื่อสินค้า 1 *"
+                    android:text="เสื้อ liverpool"
                     android:textSize="14sp"
                     android:layout_marginTop="8dp"
                     android:textAlignment="center"
@@ -276,8 +280,9 @@
 
             </LinearLayout>
 
+            <!--รองเท้า nike-->
             <LinearLayout
-                android:id="@+id/LinearLayoutClick2"
+                android:id="@+id/LinearLayoutClickMeNaja2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -290,17 +295,19 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="110dp"
+                    android:layout_width="100dp"
                     android:layout_height="110dp"
-                    app:srcCompat="@android:drawable/ic_menu_report_image"
-                    tools:src="@tools:sample/avatars" />
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/f2"
+                    android:src="@drawable/f2" />
 
                 <TextView
-                    android:id="@+id/product_name2"
+                    android:id="@+id/product_nike"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="ชื่อสินค้า 1 *"
-                    android:textSize="14sp"
+                    android:text="Nike air force AE86"
+                    android:textSize="13sp"
                     android:layout_marginTop="8dp"
                     android:textAlignment="center"
                     android:textColor="@color/black"
