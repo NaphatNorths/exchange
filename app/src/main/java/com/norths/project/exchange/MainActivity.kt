@@ -167,10 +167,30 @@ class MainActivity : AppCompatActivity() {
         emailTextView.text = email
     }
 
-
-
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        binding.ClickMe.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ExchangeFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
+        binding.LinearLayoutClickMeNaja.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ItemProfileFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
 
