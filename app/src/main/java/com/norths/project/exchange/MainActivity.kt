@@ -184,19 +184,25 @@ class MainActivity : AppCompatActivity() {
 //
 //        binding.navigation_exchange.setOnClickListener {
 //            parentFragmentManager.beginTransaction()
-//                .replace(R.id.fragment_container, MyExchangeFragment())
+//                .replace(R.id.fragment_container, ExchangeFragment())
 //                .addToBackStack(null)
 //                .commit()
 //        }
 //
-//        binding.navigation_favorite.setOnClickListener {
+//        binding.navigation_item.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, ItemFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
+//        binding.navigation_activity.setOnClickListener {
 //            parentFragmentManager.beginTransaction()
 //                .replace(R.id.fragment_container, MyExchangeFragment())
 //                .addToBackStack(null)
 //                .commit()
 //        }
-//    }
 //
+//    }
 //    override fun onDestroyView() {
 //        super.onDestroyView()
 //        _binding = null
