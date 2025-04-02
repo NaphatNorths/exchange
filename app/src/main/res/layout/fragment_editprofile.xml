@@ -6,7 +6,22 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#DCDCDC"
     tools:context=".ui.EditProfileFragment">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="แก้ไข profile"
+        android:textColor="#000000"
+        android:textSize="32sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="48dp"
+        android:layout_marginVertical="7dp"
+        android:textStyle="bold"/>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FirstnameLayout"
@@ -67,6 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:backgroundTint="@drawable/backbotton_1"
         android:text="แก้ไข" />
 
 </LinearLayout>

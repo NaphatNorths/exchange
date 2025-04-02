@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
+    android:background="#DCDCDC"
     tools:context=".ui.ItemFragment">
 
 
@@ -14,11 +15,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="My item"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
     <LinearLayout
+        android:id="@+id/LinearLayoutClickMeNaja"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -64,6 +68,8 @@
                     android:layout_marginTop="23dp"
                     android:text="เสื้อ liverpool"
                     android:textAlignment="textStart"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:textSize="20sp" />
 
                 <TextView
@@ -72,6 +78,7 @@
                     android:text="รายละเอียด: ....."
                     android:gravity="start"
                     android:textSize="16sp"
+                    android:textColor="@color/black"
                     android:textStyle="bold"/>
 
             </LinearLayout>
@@ -88,6 +95,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@drawable/backbotton_1"
         android:text="Add new item" />
 
 </LinearLayout>

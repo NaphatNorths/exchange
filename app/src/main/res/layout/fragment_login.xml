@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#DCDCDC"
     tools:context=".ui.LoginFragment">
 
     <TextView
@@ -17,7 +18,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="48dp"/>
+        android:layout_marginTop="48dp"
+        android:textStyle="bold"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -85,6 +87,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@drawable/backbotton_1"
             android:layout_marginTop="16dp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

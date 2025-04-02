@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.MyExchangeFragment"
     android:padding="16dp"
+    android:background="#DCDCDC"
     android:orientation="vertical">
 
     <TextView
@@ -13,9 +14,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="My Exchange"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:clickable="true"
-        android:focusable="true" />
+        android:focusable="true"
+        android:textColor="@color/black"
+        android:textStyle="bold"/>
 
 
     <androidx.cardview.widget.CardView
@@ -58,6 +61,8 @@
                     android:text="เสื้อ liverpool"
                     android:textAlignment="textStart"
                     android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
@@ -86,7 +91,9 @@
                     android:layout_height="wrap_content"
                     android:text="ยกเลิก"
                     android:textSize="14sp"
+                    android:backgroundTint="@drawable/backbotton_1"
                     android:layout_marginTop="8dp"/>
+
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -131,6 +138,8 @@
                     android:text="Keyboard"
                     android:textAlignment="textStart"
                     android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_marginTop="5dp"/>
 
                 <TextView

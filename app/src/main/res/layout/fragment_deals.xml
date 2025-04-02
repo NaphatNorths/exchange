@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#DCDCDC"
     tools:context=".ui.DealsFragment">
 
     <TextView
@@ -12,10 +13,11 @@
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="คำขอแลกของ"
-        android:textSize="20dp"
+        android:textSize="30dp"
         android:clickable="true"
         android:textStyle="bold"
-        android:focusable="true" />
+        android:focusable="true"
+        android:textColor="@color/black"/>
 
 
     <androidx.cardview.widget.CardView
@@ -32,6 +34,7 @@
             android:orientation="horizontal"
             android:gravity="start"
             android:padding="16dp"
+            android:layout_marginHorizontal="7dp"
             android:background="@drawable/product_border">
 
             <!-- Image Section -->
@@ -57,6 +60,8 @@
                     android:layout_height="wrap_content"
                     android:text="เสื้อ liverpool"
                     android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
@@ -65,6 +70,7 @@
                     android:text="ชื่อผู้แลกเปลี่ยน: A"
                     android:textSize="16sp"
                     android:textStyle="bold"
+                    android:textColor="@color/black"
                     android:layout_marginTop="5dp"/>
 
                 <TextView
@@ -74,6 +80,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
                     android:layout_marginBottom="16dp"/>
             </LinearLayout>
 
@@ -92,7 +99,8 @@
                     android:layout_height="wrap_content"
                     android:text="ตกลงแลก"
                     android:textSize="14sp"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@drawable/backbotton_1"/>
 
                 <Button
                     android:id="@+id/btn_cancel"
@@ -100,7 +108,9 @@
                     android:layout_height="wrap_content"
                     android:text="ไม่แลก"
                     android:textSize="14sp"
-                    android:layout_marginTop="8dp"/>
+                    android:layout_marginTop="8dp"
+                    android:backgroundTint="@drawable/backbotton_1"/>
+
             </LinearLayout>
 
         </LinearLayout>
