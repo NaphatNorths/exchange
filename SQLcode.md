@@ -13,7 +13,8 @@ CREATE TABLE itemList (
     itemname VARCHAR(255) NOT NULL,
     info TEXT NULL,
     image VARBINARY(MAX),
-	value VARCHAR(36),
+    value VARCHAR(36),
+    itemtype VARCHAR(36),
     FOREIGN KEY (userid) REFERENCES users(userid)
 );
 

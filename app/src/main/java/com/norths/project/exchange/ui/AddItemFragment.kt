@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ArrayAdapter
 import com.norths.project.exchange.R
 import com.norths.project.exchange.databinding.FragmentAdditemBinding
 
@@ -25,6 +26,12 @@ class AddItemFragment : Fragment() {
     // function to do the action in this fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val itemList = listOf("เลือกประเภท", "fashion", "sport","camping","electronics")
+        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, itemList)
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+
+        binding.itemtypeSpinner.adapter = adapter
 
         binding.AddNewItemButton.setOnClickListener {
             parentFragmentManager.beginTransaction()

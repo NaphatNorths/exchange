@@ -35,27 +35,28 @@ class ExchangeFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-        binding.LinearLayoutClick2.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ItemProfileFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-        binding.LinearLayoutClick3.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ItemProfileFragment())
-                .addToBackStack(null)
-                .commit()
-        }
-        binding.LinearLayoutClick4.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ItemProfileFragment())
-                .addToBackStack(null)
-                .commit()
-        }
+
         binding.btnAddFavorites.setOnClickListener{
             Toast.makeText(requireContext(), "เพิ่มรายการไปที่ Favorites แล้ว", Toast.LENGTH_SHORT).show()
         }
+//        binding.LinearLayoutClick2.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, ItemProfileFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
+//        binding.LinearLayoutClick3.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, ItemProfileFragment())
+//                .addToBackStack(null)
+//                .commit()
+//        }
+//        binding.LinearLayoutClick4.setOnClickListener {
+//            parentFragmentManager.beginTransaction()
+//                .replace(R.id.fragment_container, ItemProfileFragment())
+//                .addToBackStack(null)
+//                .commit()
+        }
+
     }
 
-}

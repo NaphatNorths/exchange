@@ -1,0 +1,10 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- สีเมื่อกด (Pressed) -->
+    <item android:state_pressed="true" android:color="#A6767676" />
+    <!-- สีเมื่อปิดการใช้งาน (Disabled) -->
+    <item android:state_enabled="false" android:color="#FFFFFF" />
+    <!-- สีปกติ (Default) -->
+    <item android:color="#000000" />
+
+
+</selector>

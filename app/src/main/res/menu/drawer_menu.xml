@@ -4,35 +4,35 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="หน้าหลัก" />
+            android:title="Home" />
         <item
             android:id="@+id/nav_exchange"
-            android:icon="@drawable/ic_home"
-            android:title="ของแลกเปลียน" />
+            android:icon="@drawable/ic_exchange"
+            android:title="Exchange" />
         <item
             android:id="@+id/nav_myaccount"
-            android:icon="@drawable/ic_home"
+            android:icon="@drawable/ic_person"
             android:title="My Account" />
         <item
             android:id="@+id/nav_myitem"
             android:title="Item" />
         <item
             android:id="@+id/nav_myexchange"
-            android:title="รายการของฉัน" />
+            android:title="My Exchange" />
         <item
             android:id="@+id/nav_profile"
             android:title="Profile" />
         <item
             android:id="@+id/nav_favorites"
-            android:icon="@drawable/ic_favorites"
-            android:title="รายการที่ชอบ" />
+            android:icon="@drawable/ic_favorite"
+            android:title="favorite" />
         <item
             android:id="@+id/nav_deals"
-            android:icon="@drawable/ic_home"
-            android:title="ึคำขอ" />
+            android:icon="@drawable/ic_request"
+            android:title="ึrequest" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_favorites"
+            android:icon="@drawable/ic_logout"
             android:title="Logout" />
     </group>
 </menu>
