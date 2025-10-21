@@ -47,8 +47,8 @@ class LoginFragment : Fragment() {
                     .putString("loggedInUser", username)
                     .apply()
 
-                (requireActivity() as MainActivity).LoginStuts()
-                (requireActivity() as MainActivity).setupProfile()
+                //(requireActivity() as MainActivity).LoginStuts()
+                //(requireActivity() as MainActivity).setupProfile()
                 requireActivity().supportFragmentManager.beginTransaction()
                     .replace(R.id.fragment_container, HomeFragment())
                     .commit()

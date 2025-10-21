@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.norths.project.exchange.R
-import com.norths.project.exchange.databinding.FragmentHomeBinding
+import com.norths.project.exchange.databinding.FragmentSearchBinding
 
-class HomeFragment : Fragment() {
+class SearchFragment : Fragment() {
 
-    private var _binding: FragmentHomeBinding? = null
+    private var _binding: FragmentSearchBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -19,7 +19,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // ONLY inflate layout here
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
+        _binding = FragmentSearchBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -27,13 +27,24 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        /*binding.searchView.setOnClickListener{
+        binding.cardEve.setOnClickListener{
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, ExchangeFragment())
                 .addToBackStack(null)
                 .commit()
-        }*/
-
+        }
+        binding.btnSearch.setOnClickListener{
+            binding.searchView.setQuery("Teddy Bea", false)
+        }
+        binding.btnSearch2.setOnClickListener{
+            binding.searchView.setQuery("Hoody", false)
+        }
+        binding.btnSearch3.setOnClickListener{
+            binding.searchView.setQuery("pokemon", false)
+        }
+        binding.btnSearch4.setOnClickListener{
+            binding.searchView.setQuery("Art", false)
+        }
     }
 
 }

@@ -1,0 +1,372 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DCDCDC"
+    tools:context=".ui.SearchFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/background_prongsai_3"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/nav_home"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="EXC"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"/>
+
+            <SearchView
+                android:id="@+id/searchView"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_toEndOf="@id/nav_home"
+                android:layout_toStartOf="@id/btnheart"
+                android:layout_centerInParent="true"
+                android:layout_marginHorizontal="8dp"
+                android:iconifiedByDefault="false"
+                android:queryHint="Search"
+                android:background="@drawable/background_prongsai"/>
+
+            <ImageView
+                android:id="@+id/btnheart"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_heart"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"/>
+        </RelativeLayout>
+
+        <!-- Category chips/icons (top row) -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none"
+            android:layout_marginTop="6dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="6dp">
+
+                <!-- ใช้ ImageView หรือ ImageButton ตามต้องการ -->
+                <Button
+                    android:id="@+id/btn_toy"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#F5FF9F"
+                    android:text="🧸"
+                    android:textColor="#000000"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/btn_fashion"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="🥼"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:backgroundTint="#CC7CF8E5"/>
+
+                <Button
+                    android:id="@+id/btn_utensils"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="🥼"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:backgroundTint="#CCFFB0C9"/>
+
+                <Button
+                    android:id="@+id/btn_furniture"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="🛋"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:backgroundTint="#A09FFF"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- Category list (with dividers) -->
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/btn_search"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="3dp"
+                android:background="@drawable/btn_list_style"
+                android:text="Teddy Bea"
+                android:textSize="16dp"
+                android:textColor="#333333"
+                android:textStyle="normal"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"/>
+
+            <Button
+                android:id="@+id/btn_search2"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="3dp"
+                android:background="@drawable/btn_list_style"
+                android:text="Hoody"
+                android:textSize="16dp"
+                android:textColor="#333333"
+                android:textStyle="normal"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"/>
+
+            <Button
+                android:id="@+id/btn_search3"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="3dp"
+                android:background="@drawable/btn_list_style"
+                android:text="Pokemon"
+                android:textSize="16dp"
+                android:textColor="#333333"
+                android:textStyle="normal"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"/>
+
+            <Button
+                android:id="@+id/btn_search4"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginVertical="3dp"
+                android:background="@drawable/btn_list_style"
+                android:text="Art"
+                android:textSize="16dp"
+                android:textColor="#333333"
+                android:textStyle="normal"
+                android:gravity="center_vertical|start"
+                android:paddingStart="16dp"/>
+
+        </LinearLayout>
+
+
+        <!-- === SHOW MORE === -->
+        <TextView
+            android:id="@+id/tv_show_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SHOW MORE"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#333333"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="6dp"/>
+
+        <!-- === GRID: category cards (2 คอลัมน์) === -->
+        <GridLayout
+            android:id="@+id/grid_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:useDefaultMargins="true"
+            android:alignmentMode="alignMargins"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="12dp">
+
+            <!-- Card 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_eve"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/eve"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/overlay_gradient_bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Eve"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:paddingVertical="10dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 2 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_chairs"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chairs"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/overlay_gradient_bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Chairs"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:paddingVertical="10dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 3 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_shoe"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/shoe"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/overlay_gradient_bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="shoe"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:paddingVertical="10dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card 4 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_guitar"
+                android:layout_width="0dp"
+                android:layout_height="180dp"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_margin="6dp"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/guitar"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/overlay_gradient_bottom"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Guitar"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:layout_gravity="bottom"
+                        android:paddingVertical="10dp"/>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+        </GridLayout>
+
+
+
+
+
+    </LinearLayout>
+</ScrollView>
