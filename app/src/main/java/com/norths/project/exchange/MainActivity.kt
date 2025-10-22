@@ -13,11 +13,15 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import com.norths.project.exchange.databinding.ActivityMainBinding
 import com.norths.project.exchange.databinding.ActivityBottomViewBinding
+import com.norths.project.exchange.ui.AddItemFragment
+import com.norths.project.exchange.ui.ChatFragment
+import com.norths.project.exchange.ui.ChatmessageFragment
 import com.norths.project.exchange.ui.DealsFragment
 import com.norths.project.exchange.ui.FavoritesFragment
 import com.norths.project.exchange.ui.HomeFragment
 import com.norths.project.exchange.ui.LoginFragment
 import com.norths.project.exchange.ui.ExchangeFragment
+import com.norths.project.exchange.ui.HistoryFragment
 import com.norths.project.exchange.ui.ItemFragment
 import com.norths.project.exchange.ui.MyExchangeFragment
 import com.norths.project.exchange.ui.ProfileFragment
@@ -52,15 +56,15 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_add -> {
-                    replaceFragment(ExchangeFragment())
+                    replaceFragment(AddItemFragment())
                     true
                 }
                 R.id.navigation_notification -> {
-                    replaceFragment(DealsFragment())
+                    replaceFragment(ChatFragment())
                     true
                 }
                 R.id.navigation_Account -> {
-                    replaceFragment(ProfileFragment())
+                    replaceFragment(HistoryFragment())
                     true
                 }
                 else -> false
@@ -68,13 +72,16 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    fun setBottomNavVisible(visible: Boolean) {
+        binding.bottomNavigation.visibility = if (visible) android.view.View.VISIBLE else android.view.View.GONE
+    }
+
+    fun replaceFragment(fragment: Fragment) {
         supportFragmentManager
             .beginTransaction()
             .setReorderingAllowed(true)
             .replace(R.id.fragment_container, fragment)
             .commit()
     }
-    //
 }
 

@@ -1,0 +1,308 @@
+<!-- res/layout/fragment_chatmessage.xml -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D0D0D0"
+    tools:context=".ui.ChatmessageFragment">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical"
+        android:background="@android:color/white">
+
+        <ImageButton
+            android:id="@+id/btnBackMessage"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="back"
+            android:background="@android:color/transparent"
+            app:srcCompat="@drawable/ic_backblack"/>
+
+        <ImageView
+            android:id="@+id/imgAvatar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_account"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="4dp"
+            android:background="@drawable/bg_avatar_circle"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/txtTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FinTheHuman"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="#111111"/>
+
+            <TextView
+                android:id="@+id/txtSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Active 11m ago"
+                android:textSize="12sp"
+                android:textColor="#7A7A7A"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/btnCall"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="call"
+            app:srcCompat="@drawable/ic_phone"/>
+
+        <ImageButton
+            android:id="@+id/btnVideo"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="video call"
+            app:srcCompat="@drawable/ic_videocam"/>
+
+    </LinearLayout>
+
+    <!-- Scrollable chat area -->
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="64dp"
+        android:layout_marginTop="56dp">
+
+        <LinearLayout
+            android:id="@+id/chatList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <!-- Date chip -->
+            <TextView
+                android:id="@+id/dateChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nov 30, 2023, 9:41 AM"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="6dp"
+                android:textSize="12sp"
+                android:textColor="#444444"
+                android:layout_gravity="center_horizontal"/>
+
+            <!-- Incoming: image bubble -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_account"
+                    android:background="@drawable/bg_avatar_circle"/>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ex2"/>
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="8dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_exchange"/>
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ex1"/>
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <!-- Outgoing: text bubble -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สวัสดีครับพอดีผมเห็นฟิกเกอร์โปเกม่อน..."
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_bubble_right"
+                    android:padding="10dp"
+                    android:maxWidth="280dp"/>
+            </LinearLayout>
+
+            <!-- Outgoing: small reply bubble -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:layout_marginTop="6dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="เดี๋ยวผมส่งรูปให้สักครู่นะครับ"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_bubble_right"
+                    android:padding="10dp"
+                    android:maxWidth="240dp"/>
+            </LinearLayout>
+
+            <!-- Incoming: stacked small bubbles -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/ic_account"
+                        android:background="@drawable/bg_avatar_circle"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="ได้ครับ"
+                        android:textColor="#111111"
+                        android:background="@drawable/bg_bubble_left"
+                        android:padding="10dp"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="4dp"
+                    android:text="เดี๋ยวลองส่งรูปมาก่อนครับขอดูดก่อน"
+                    android:textColor="#111111"
+                    android:background="@drawable/bg_bubble_left"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="4dp"
+                    android:text="ตัวนี้ผมซื้อมาประมาณ300ครับ"
+                    android:textColor="#111111"
+                    android:background="@drawable/bg_bubble_left"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="36dp"
+                    android:layout_marginTop="4dp"
+                    android:text="ควยไรสัสไอ้ฉิบหาย"
+                    android:textColor="#111111"
+                    android:background="@drawable/bg_bubble_left"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom input bar -->
+    <LinearLayout
+        android:id="@+id/inputBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:padding="8dp"
+        android:background="@android:color/white"
+        android:gravity="center_vertical">
+
+        <EditText
+            android:id="@+id/edtMessage"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="message..."
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:background="@drawable/bg_input"/>
+
+        <ImageButton
+            android:id="@+id/btnSticker"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="sticker"
+            app:srcCompat="@drawable/ic_emoji"/>
+
+        <ImageButton
+            android:id="@+id/btnMic"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="mic"
+            app:srcCompat="@drawable/ic_mic"/>
+
+        <ImageButton
+            android:id="@+id/btnGallery"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="gallery"
+            app:srcCompat="@drawable/ic_gallery"/>
+
+        <ImageButton
+            android:id="@+id/btnSend"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="send"
+            app:srcCompat="@drawable/ic_send"/>
+    </LinearLayout>
+
+</FrameLayout>

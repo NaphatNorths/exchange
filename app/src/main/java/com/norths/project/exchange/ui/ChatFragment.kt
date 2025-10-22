@@ -8,12 +8,12 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.norths.project.exchange.MainActivity
 import com.norths.project.exchange.R
-import com.norths.project.exchange.databinding.FragmentExchangeBinding
+import com.norths.project.exchange.databinding.FragmentChatBinding
 
 
-class ExchangeFragment : Fragment() {
+class ChatFragment : Fragment() {
 
-    private var _binding: FragmentExchangeBinding? = null
+    private var _binding: FragmentChatBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -21,7 +21,7 @@ class ExchangeFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle? ): View? {
         (activity as? MainActivity)?.setBottomNavVisible(false)
-        _binding = FragmentExchangeBinding.inflate(inflater, container, false)
+        _binding = FragmentChatBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -29,10 +29,15 @@ class ExchangeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnBack.setOnClickListener {
+        binding.account1.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ChatmessageFragment())
+                .commit()
+        }
+        binding.btnBackChat.setOnClickListener {
             (activity as? MainActivity)?.setBottomNavVisible(true)
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, SearchFragment())
+                .replace(R.id.fragment_container, HomeFragment())
                 .commit()
         }
     }

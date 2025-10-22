@@ -1,204 +1,162 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.ExchangeFragment"
+    android:fillViewport="true"
     android:background="#DCDCDC"
-    android:orientation="vertical">
+    tools:context=".ui.ExchangeFragment">
 
-    <TextView
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:textColor="@color/black"
-        android:text="รายการของทั้งหมด"
-        android:textSize="18dp"
-        android:textStyle="bold" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginHorizontal="6dp"
-        android:background="@drawable/background_prongsai_3"
-        android:weightSum="2">
+        <!-- พื้นหลังแบบภาพเต็ม -->
+        <ImageView
+            android:id="@+id/bgImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:paddingStart="170dp"
+            android:src="@drawable/eve"
+            android:contentDescription="@string/app_name" />
 
+        <!-- แถบด้านบน: เมนูซ้าย & หัวใจขวา -->
         <LinearLayout
-            android:id="@+id/LinearLayoutClick"
-            android:layout_width="0dp"
+            android:id="@+id/topBar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_margin="30dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="@drawable/background_prongsai_2"
-            android:layout_weight="1"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="16dp">
 
-            <TextView
-                android:id="@+id/product_name1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="เสื้อ liverpool"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Back"
+                app:srcCompat="@drawable/ic_back" />
 
-            <ImageView
-                android:id="@+id/imageView1"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/liverpool" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/btnLike"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@android:color/transparent"
+                android:contentDescription="Favorite"
+                app:srcCompat="@drawable/ic_heart" />
+        </LinearLayout>
+
+        <!-- ชิปโปรไฟล์ -->
+        <LinearLayout
+            android:id="@+id/profileChip"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="56dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="12dp"
+            android:gravity="center_vertical"
+            android:elevation="2dp">
 
             <Button
-                android:id="@+id/btnAddFavorites"
+                android:id="@+id/btn_user"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="🙎🏻‍♂️ User234534"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                android:paddingStart="10dp"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#303030"
+                android:ellipsize="none"
+                android:singleLine="true"
+                android:scrollHorizontally="true" />
+        </LinearLayout>
+
+        <!-- ส่วนข้อความด้านล่าง -->
+        <LinearLayout
+            android:id="@+id/bottomTexts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_margin="16dp"
+            android:orientation="vertical">
+
+            <!-- ป้ายหมวด -->
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Add to Favorites"
-                android:textSize="10dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@drawable/backbotton_1"/>
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginBottom="6dp"
+                android:gravity="center_vertical">
+
+                <Button
+                    android:id="@+id/btn_toy2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="🧸 TOY"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    android:textColor="#000000"
+                    android:backgroundTint="#F5FF9F"/>
+            </LinearLayout>
+
+            <!-- หัวข้อใหญ่ -->
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EVE"
+                android:textSize="48sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:shadowColor="#80000000"
+                android:shadowDx="0"
+                android:shadowDy="2"
+                android:shadowRadius="6" />
+
+            <!-- คำอธิบาย -->
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="ฟิกเกอร์โปเกม่อน eve ขนาดเล็ก\nซื้อมาไม่นานมากค่ะ สภาพดีไม่มีตำหนิ\nหาแลกฟิกเกอร์ ตัวอื่นๆคุยได้"
+                android:textColor="@android:color/white"
+                android:textSize="15dp"
+                android:maxLines="3" />
+
+            <Button
+                android:id="@+id/btn_exchange"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginStart="10dp"
+                android:text="EXCHANGE"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+
+                android:paddingEnd="10dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:layout_marginTop="40dp"
+                android:backgroundTint="#000000"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/LinearLayoutClick2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_margin="30dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="@drawable/background_prongsai_2"
-            android:layout_weight="1"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
 
-            <TextView
-                android:id="@+id/product_name2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Nike air force AE86"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/f2" />
-
-            <Button
-                android:id="@+id/btn_add_favorites2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add to Favorites"
-                android:textSize="10dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@drawable/backbotton_1"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!-- Move LinearLayout2 below LinearLayout1 -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginVertical="6dp"
-        android:layout_marginHorizontal="6dp"
-        android:background="@drawable/background_prongsai_3"
-        android:weightSum="2">
-
-        <LinearLayout
-            android:id="@+id/LinearLayoutClick3"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_margin="30dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:background="@drawable/background_prongsai_2"
-            android:layout_weight="1"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
-
-            <TextView
-                android:id="@+id/product_name3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Football"
-                android:textSize="14sp"
-                android:layout_marginTop="8dp"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textStyle="bold"/>
-
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/s1" />
-
-            <Button
-                android:id="@+id/btn_add_favorites3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Add to Favorites"
-                android:textSize="10dp"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@drawable/backbotton_1"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/LinearLayoutClick4"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="30dp"
-            android:layout_weight="1"
-            android:background="@drawable/background_prongsai_2"
-            android:clickable="true"
-            android:focusable="true"
-            android:gravity="center"
-            android:orientation="vertical"> <!-- เพิ่ม layout_weight เป็น 1 เพื่อให้พื้นที่เท่ากัน -->
-
-            <TextView
-                android:id="@+id/product_name4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="tent"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="14sp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="110dp"
-                android:layout_height="110dp"
-                android:src="@drawable/c3" />
-
-            <Button
-                android:id="@+id/btn_add_favorites4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:backgroundTint="@drawable/backbotton_1"
-                android:text="Add to Favorites"
-                android:textSize="10dp" />
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-</LinearLayout>
+    </FrameLayout>
+</ScrollView>

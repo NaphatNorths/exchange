@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import com.norths.project.exchange.MainActivity
 import com.norths.project.exchange.R
 import com.norths.project.exchange.databinding.FragmentAdditemBinding
 
@@ -18,7 +19,7 @@ class AddItemFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // ONLY inflate layout here
+        (activity as? MainActivity)?.setBottomNavVisible(false)
         _binding = FragmentAdditemBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -27,16 +28,17 @@ class AddItemFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val itemList = listOf("เลือกประเภท", "fashion", "sport","camping","electronics")
-        val adapter = ArrayAdapter(requireContext(), android.R.layout.simple_spinner_item, itemList)
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
-        binding.itemtypeSpinner.adapter = adapter
-
-        binding.AddNewItemButton.setOnClickListener {
+        binding.btnBack.setOnClickListener {
+            (activity as? MainActivity)?.setBottomNavVisible(true)
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, ItemFragment())
-                .addToBackStack(null)
+                .replace(R.id.fragment_container, HomeFragment())
+                .commit()
+        }
+        binding.btnCancel.setOnClickListener {
+            (activity as? MainActivity)?.setBottomNavVisible(true)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, HomeFragment())
                 .commit()
         }
     }
