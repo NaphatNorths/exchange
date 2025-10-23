@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.norths.project.exchange.MainActivity
 import com.norths.project.exchange.R
 import com.norths.project.exchange.databinding.FragmentProfileBinding
 
@@ -26,16 +27,18 @@ class ProfileFragment : Fragment() {
     // function to do the action in this fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnFixprofile.setOnClickListener {
+
+        binding.btnEditProfile.setOnClickListener {
+            (activity as? MainActivity)?.setBottomNavVisible(false)
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragment_container, EditProfileFragment())
-                .addToBackStack(null)
                 .commit()
         }
-        binding.btnFixpass.setOnClickListener {
+
+        binding.imgSetting.setOnClickListener {
+            (activity as? MainActivity)?.setBottomNavVisible(false)
             parentFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, EditPasswordFragment())
-                .addToBackStack(null)
+                .replace(R.id.fragment_container, SettingFragment())
                 .commit()
         }
     }

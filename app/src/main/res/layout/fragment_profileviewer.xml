@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="#F0F0F0"
-    tools:context=".ui.ProfileFragment">
+    tools:context=".ui.ProfileViewerFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -23,6 +23,15 @@
             android:gravity="center_vertical"
             android:background="@android:color/white">
 
+            <ImageButton
+                android:id="@+id/btnBackProfile"
+                style="?attr/borderlessButtonStyle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:contentDescription="back"
+                android:background="@android:color/transparent"
+                app:srcCompat="@drawable/ic_backblack"/>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,7 +47,7 @@
                 android:layout_weight="1" />
 
             <ImageView
-                android:id="@+id/imgSetting"
+                android:id="@+id/imgTopAvatar"
                 android:layout_width="32dp"
                 android:layout_height="32dp"
                 android:src="@drawable/ic_setting"
@@ -138,22 +147,22 @@
                 android:gravity="center">
 
                 <Button
-                    android:id="@+id/btnEditProfile"
+                    android:id="@+id/btnFollow"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:text="Edit Profile"
+                    android:text="Follow"
                     android:textAllCaps="false"
                     android:textColor="@android:color/white"
                     android:backgroundTint="#111111"
                     android:layout_marginEnd="8dp" />
 
                 <Button
-                    android:id="@+id/btnShare"
+                    android:id="@+id/btnMessage"
                     android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_weight="1"
-                    android:text="Share profile"
+                    android:text="Message"
                     android:textAllCaps="false"
                     android:backgroundTint="#DDDDDD"
                     android:textColor="#111111" />

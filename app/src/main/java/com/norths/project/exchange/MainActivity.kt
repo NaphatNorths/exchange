@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                     true
                 }
                 R.id.navigation_Account -> {
-                    replaceFragment(HistoryFragment())
+                    replaceFragment(ProfileFragment())
                     true
                 }
                 else -> false

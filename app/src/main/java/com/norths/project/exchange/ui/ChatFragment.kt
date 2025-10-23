@@ -20,7 +20,6 @@ class ChatFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle? ): View? {
-        (activity as? MainActivity)?.setBottomNavVisible(false)
         _binding = FragmentChatBinding.inflate(inflater, container, false)
         return binding.root
     }

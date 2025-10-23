@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.norths.project.exchange.MainActivity
+import com.norths.project.exchange.R
 import com.norths.project.exchange.databinding.FragmentEditprofileBinding
 
 class EditProfileFragment : Fragment() {
@@ -25,5 +27,12 @@ class EditProfileFragment : Fragment() {
     // function to do the action in this fragment
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnBackProfileEdit.setOnClickListener {
+            (activity as? MainActivity)?.setBottomNavVisible(true)
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragment_container, ProfileFragment())
+                .commit()
+        }
     }
 }
